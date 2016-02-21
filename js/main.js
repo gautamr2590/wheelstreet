@@ -19,7 +19,7 @@ function onlyNum(evt) {
     return true;
 }
 
-
+myForm.setAttribute( "autocomplete", "off" );
 function validate() {
 		//First Name Validation
 	    if(fname.value == "" )
@@ -28,6 +28,8 @@ function validate() {
            	fname.focus() ;
            	fname.setAttribute("class", "form-control error");
             return false;
+         } else {
+            document.getElementById('fnamee').style.display = "none";
          }
 
         //Last Name Validation
@@ -37,6 +39,8 @@ function validate() {
             lname.focus() ;
             lname.setAttribute("class", "form-control error");
             return false;
+         } else {
+            document.getElementById('lnamee').style.display = "none";
          }
 
         //Email Validation
@@ -46,15 +50,19 @@ function validate() {
             email.focus();
             email.setAttribute("class", "form-control error");
             return false;
+         } else {
+            document.getElementById('emaile').style.display = "none";
          }
 
         //Mobile Number Validation
-        if(mnumber.value == "" || document.myForm.mnumber.value.length <= 7)
+        if(mnumber.value == "" || mnumber.value.length <= 7)
          {
          	document.getElementById('mnumbere').style.display = "block";
             mnumber.focus();
             mnumber.setAttribute("class", "form-control error");
             return false;
+         } else {
+            document.getElementById('mnumbere').style.display = "none";
          }
 
         //Password Validation
@@ -64,19 +72,30 @@ function validate() {
             pass.focus();
             pass.setAttribute("class", "form-control error");
             return false;
+         } else {
+            document.getElementById('passe').style.display = "none";
          }
 
         //Confirm Password Validation
         if(cpass.value == "" )
          {
          	document.getElementById('cpasse').style.display = "block";
-            passe.focus();
+            cpass.focus();
             cpass.setAttribute("class", "form-control error");
             return false;
+         } else {
+            document.getElementById('cpasse').style.display = "none";
          }
 
         //Checking if 2 passwords are same
-        if (document.myForm.pass.value != document.myForm.cpass.value ) {
+        if (pass.value != cpass.value ) {
+            // console.log(pass.value);
+            // console.log(cpass.value);
+            cpass.focus();
+            cpass.setAttribute("class", "form-control error");
         	document.getElementById('nomatch').style.display = "block";
+            return false;
+        } else {
+            document.getElementById('nomatch').style.display = "none";
         }
 }
