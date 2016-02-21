@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WheelStreet</title>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+<div class="col-md-3 col-xs-12">
+	<form name="myForm" onsubmit="return(validate());">
+		<h3>Sign Up</h3><br>
+		<div class="input-group">
+			<input type="text" class="form-control" name="fname" id="fname" autocomplete="off">
+			<label>First Name</label>
+			<span class="text-warning" id="fnamee">Please enter your first name.</span>
+		</div>
+
+		<div class="input-group">
+			<input type="text" class="form-control" name="lname" id="lname" autocomplete="off">
+			<label>Last Name</label>
+			<span class="text-warning" id="lnamee">Please enter your last name.</span>
+		</div>
+
+		<div class="input-group">
+			<input type="email" class="form-control" name="email" id="email" autocomplete="off" autocomplete="off"></input>
+			<label>Email</label>
+			<span class="text-warning" id="emaile">Please enter your email.</span>
+		</div>
+
+		<div class="input-group">
+			<input type="text" class="form-control" name="mnumber" id="mnumber" onkeypress="return onlyNum(event)"  autocomplete="off" maxlength="10">
+			<label>Mobile Number</label>
+			<span class="text-warning" id="mnumbere">Mobile number should be 10 Digit</span>
+		</div>
+
+		<div class="input-group">
+			<input type="password" class="form-control" name="pass" id="pass" autocomplete="off">
+			<label>Password</label>
+			<span class="text-warning" id="passe">Password should be greater that 6 charaters.</span>
+		</div>
+
+		<div class="input-group">
+			<input type="password" class="form-control" name="cpass" id="cpass" autocomplete="off">
+			<label>Confirm Password</label>
+			<span class="text-warning" id="cpasse">Enter the same password as above.</span>
+		</div> 
+
+		<button type="submit" class="btn btn-success">Submit</button>
+	</form>
+</div>
+</body>
+</html>
