@@ -7,8 +7,8 @@ $(document).ready(function() {
       $(this).next('label').removeClass('used');
   });
 
-
-    $("#fname, #lname").change(function (){
+//Fucntion if autofill is triggered
+    $(document).change(function (){
         $('input:-webkit-autofill').each(function(){
             if($('.form-control').val())
                 $(this).next('label').addClass('used');

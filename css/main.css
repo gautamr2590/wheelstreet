@@ -17,7 +17,7 @@
 }
 
 .form-control {
- 	font-size:18px;
+ 	  font-size:18px;
   	padding:10px 10px 10px 5px;
   	display:block;
   	border:none !important;
@@ -50,7 +50,7 @@ label          {
   left:5px;
   top:10px;
   transition:0.3s ease all;
-  // z-index: 2;  	 
+  z-index: 2;  	 
 }
 
 .form-control:focus ~ label {
@@ -61,7 +61,7 @@ label          {
 
 .used {
 	// z-index: 2 !important;
-	top:-20px;
+	   top:-20px;
   	font-size:14px;
   	color:#009688;
 }
