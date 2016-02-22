@@ -7,7 +7,17 @@ $(document).ready(function() {
       $(this).next('label').removeClass('used');
   });
 
+
+    $("#fname, #lname").change(function (){
+        $('input:-webkit-autofill').each(function(){
+            if($('.form-control').val())
+                $(this).next('label').addClass('used');
+            else
+                $(this).next('label').removeClass('used');
+        });
+    });
 });
+
 
 //Number Restriction using regex
 function onlyNum(evt) {
@@ -19,7 +29,6 @@ function onlyNum(evt) {
     return true;
 }
 
-myForm.setAttribute( "autocomplete", "off" );
 function validate() {
 		//First Name Validation
 	    if(fname.value == "" )
